@@ -14,7 +14,7 @@ const Index = () => {
             Resilient Tucson Dashboard
           </h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            Your snapshot of Tucson's water health and how you can help.
+            Snapshot of Tucson's readiness for the future -- and how you can help
           </p>
         </div>
 
@@ -59,7 +59,7 @@ const Index = () => {
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-lg font-semibold text-slate-800">
-                    Current CAP Reservoir Levels
+                    Supply: Current CAP Reservoir Levels
                   </CardTitle>
                   <Badge variant="secondary" className="bg-green-100 text-green-800">
                     Good
@@ -83,7 +83,7 @@ const Index = () => {
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-lg font-semibold text-slate-800">
-                    Annual Per Capita Consumption
+                    Demand: Annual Consumption
                   </CardTitle>
                   <Badge variant="secondary" className="bg-amber-100 text-amber-800">
                     Warning
@@ -115,7 +115,7 @@ const Index = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="text-4xl font-bold text-red-600 mb-2">-15%</div>
+                <div className="text-4xl font-bold text-red-600 mb-2">-5%</div>
                 <div className="text-lg font-medium text-slate-700 mb-3">Below Average</div>
                 <div className="w-full bg-slate-200 rounded-full h-3 mb-4">
                   <div className="bg-red-500 h-3 rounded-full" style={{ width: '35%' }}></div>
@@ -218,8 +218,18 @@ const Index = () => {
             <strong>Disclaimer:</strong> Data presented is for conceptual demonstration only and may not reflect current real-time conditions. 
             Consult official city and state resources for definitive information.
           </p>
-          <p>
+          <p className="mb-4">
             Built as a learning project to promote water awareness and community engagement in Tucson, AZ.
+          </p>
+          <p className="text-xs text-slate-400">
+            Framework: <a 
+              href="https://resilientcitiesnetwork.org/downloadable_resources/Publications/City%20Resilience%20Framework%2024%20FINAL_.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-700 underline"
+            >
+              City Resilience Framework
+            </a>
           </p>
         </footer>
       </div>
