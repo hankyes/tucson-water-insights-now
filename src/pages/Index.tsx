@@ -11,11 +11,18 @@ const Index = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-slate-800 mb-4">
-            Resilient Tucson Water Scorecard
+            Resilient Tucson Dashboard
           </h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             Your snapshot of Tucson's water health and how you can help.
           </p>
+        </div>
+
+        {/* Category Section */}
+        <div className="max-w-4xl mx-auto mb-8">
+          <h2 className="text-3xl font-bold text-slate-800 text-center">
+            Category
+          </h2>
         </div>
 
         {/* Primary Water Security Grade Card */}
@@ -24,7 +31,7 @@ const Index = () => {
             <CardContent className="text-center py-12">
               <div className="flex items-center justify-center mb-6">
                 <Droplets className="w-16 h-16 text-blue-500 mr-4" />
-                <div className="text-8xl font-bold text-amber-500">C-</div>
+                <div className="text-8xl font-bold text-amber-500">B-</div>
               </div>
               <h2 className="text-3xl font-bold text-slate-800 mb-4">
                 Overall Water Security
@@ -126,7 +133,7 @@ const Index = () => {
           <h2 className="text-3xl font-bold text-slate-800 mb-8 text-center">
             What You Can Do to Help
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* CTA 1: Home Water Audit */}
             <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
@@ -139,9 +146,9 @@ const Index = () => {
                 </p>
                 <Button 
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-                  onClick={() => window.open('https://www.tucsonaz.gov/water/conservation-tips', '_blank')}
+                  onClick={() => window.open('https://www.youtube.com/watch?v=jaFlNxEvTOU', '_blank')}
                 >
-                  Learn More <ExternalLink className="ml-2 h-4 w-4" />
+                  Watch Tutorials <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
             </Card>
@@ -158,9 +165,9 @@ const Index = () => {
                 </p>
                 <Button 
                   className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  onClick={() => window.open('https://www.tucsonaz.gov/mayor-council/meetings', '_blank')}
+                  onClick={() => window.open('https://www.tucsonaz.gov/files/sharedassets/public/v/1/clerks/documents/agenda-committee/mayorandcouncil_publicparticipation.pdf', '_blank')}
                 >
-                  Take Action <ExternalLink className="ml-2 h-4 w-4" />
+                  Attend a Meeting <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
             </Card>
@@ -177,9 +184,28 @@ const Index = () => {
                 </p>
                 <Button 
                   className="w-full bg-purple-600 hover:bg-purple-700 text-white"
-                  onClick={() => window.open('https://watershedmg.org/', '_blank')}
+                  onClick={() => window.open('https://watershedmg.org/get-involved', '_blank')}
                 >
-                  Explore Options <ExternalLink className="ml-2 h-4 w-4" />
+                  Volunteer Today <ExternalLink className="ml-2 h-4 w-4" />
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* CTA 4: Order Free Water Saving Kit */}
+            <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-6">
+                <div className="text-4xl mb-4">🎁</div>
+                <h3 className="text-xl font-bold text-slate-800 mb-3">
+                  Order Free Water Saving Kit
+                </h3>
+                <p className="text-slate-600 mb-6">
+                  A free kit for individuals to save water provided by Tucson Water & Environmental Education Exchange, a nonprofit 501(c)(3).
+                </p>
+                <Button 
+                  className="w-full bg-orange-600 hover:bg-orange-700 text-white"
+                  onClick={() => window.open('https://www.eeexchange.org/twconserve', '_blank')}
+                >
+                  Order Free Kit <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
             </Card>
