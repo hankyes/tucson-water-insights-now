@@ -3,9 +3,9 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Resilient-Tucson-Dashboard/',
-  ...
-});
+  base: '/tucson-water-insights-now/',
+  plugins: [react()],
+})
+
 
