@@ -27,22 +27,22 @@ const Index = () => {
 
         {/* Primary Water Security Grade Card */}
         <div className="max-w-4xl mx-auto mb-12">
-          <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+            <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
             <CardContent className="text-center py-12">
               <div className="flex items-center justify-center mb-6">
                 <Droplets className="w-16 h-16 text-blue-500 mr-4" />
-                <div className="text-8xl font-bold text-amber-500">B-</div>
+                <div className="text-8xl font-bold text-red-500">C+</div>
               </div>
               <h2 className="text-3xl font-bold text-slate-800 mb-4">
                 Overall Water Security
               </h2>
               <p className="text-lg text-slate-600 mb-6 max-w-2xl mx-auto">
-                Tucson's water security reflects moderate resilience with room for improvement. 
-                Factors include reservoir levels, aquifer recharge rates, consumption patterns, 
-                and climate forecast impacts on long-term sustainability.
+                Tucson's water security shows concerning vulnerabilities due to extreme drought conditions, 
+                significantly reduced CAP allocations, and one of the driest winters on record. 
+                Immediate conservation action is critical for long-term sustainability.
               </p>
               <p className="text-sm text-slate-400">
-                Data last updated: June 26, 2025
+                Data last updated: January 17, 2025 (Real USGS & ADWR sources)
               </p>
             </CardContent>
           </Card>
@@ -59,21 +59,21 @@ const Index = () => {
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-lg font-semibold text-slate-800">
-                    Supply: Current CAP Reservoir Levels
+                    Supply: Lake Mead/CAP Levels
                   </CardTitle>
-                  <Badge variant="secondary" className="bg-green-100 text-green-800">
-                    Good
+                  <Badge variant="secondary" className="bg-red-100 text-red-800">
+                    Critical
                   </Badge>
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="text-4xl font-bold text-green-600 mb-2">63%</div>
+                <div className="text-4xl font-bold text-red-600 mb-2">37%</div>
                 <div className="text-lg font-medium text-slate-700 mb-3">Full</div>
                 <div className="w-full bg-slate-200 rounded-full h-3 mb-4">
-                  <div className="bg-green-500 h-3 rounded-full" style={{ width: '63%' }}></div>
+                  <div className="bg-red-500 h-3 rounded-full" style={{ width: '37%' }}></div>
                 </div>
                 <p className="text-sm text-slate-600">
-                  Crucial for Tucson's long-term water supply through managed aquifer recharge programs.
+                  Lake Mead at 1,065 ft (164 ft below full). Tier 1 shortage declared, reducing CAP deliveries to Arizona.
                 </p>
               </CardContent>
             </Card>
@@ -85,19 +85,19 @@ const Index = () => {
                   <CardTitle className="text-lg font-semibold text-slate-800">
                     Demand: Annual Consumption
                   </CardTitle>
-                  <Badge variant="secondary" className="bg-amber-100 text-amber-800">
-                    Warning
+                  <Badge variant="secondary" className="bg-green-100 text-green-800">
+                    Improved
                   </Badge>
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="text-4xl font-bold text-amber-600 mb-2">146</div>
+                <div className="text-4xl font-bold text-green-600 mb-2">128</div>
                 <div className="text-lg font-medium text-slate-700 mb-3">GPCD</div>
                 <div className="w-full bg-slate-200 rounded-full h-3 mb-4">
-                  <div className="bg-amber-500 h-3 rounded-full" style={{ width: '73%' }}></div>
+                  <div className="bg-green-500 h-3 rounded-full" style={{ width: '64%' }}></div>
                 </div>
                 <p className="text-sm text-slate-600">
-                  Gallons per capita per day usage in 2015. Conservation efforts continue to reduce consumption.
+                  Gallons per capita per day (2024). Tucson achieved significant reductions through conservation programs.
                 </p>
               </CardContent>
             </Card>
@@ -107,25 +107,57 @@ const Index = () => {
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-lg font-semibold text-slate-800">
-                    Rainfall Anomaly (12 Months)
+                    Rainfall Anomaly (Aug-Mar)
                   </CardTitle>
                   <Badge variant="secondary" className="bg-red-100 text-red-800">
-                    Critical
+                    Extreme
                   </Badge>
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="text-4xl font-bold text-red-600 mb-2">-5%</div>
-                <div className="text-lg font-medium text-slate-700 mb-3">Below Average</div>
+                <div className="text-4xl font-bold text-red-600 mb-2">-85%</div>
+                <div className="text-lg font-medium text-slate-700 mb-3">Driest on Record</div>
                 <div className="w-full bg-slate-200 rounded-full h-3 mb-4">
-                  <div className="bg-red-500 h-3 rounded-full" style={{ width: '35%' }}></div>
+                  <div className="bg-red-500 h-3 rounded-full" style={{ width: '15%' }}></div>
                 </div>
                 <p className="text-sm text-slate-600">
-                  Reduced precipitation impacts natural recharge and increases demand on stored water resources.
+                  Tucson experienced driest August-March period on record. Extreme drought conditions stress ecosystems.
                 </p>
               </CardContent>
             </Card>
           </div>
+        </div>
+
+        {/* Interactive Water Security Map Section */}
+        <div className="max-w-6xl mx-auto mb-12">
+          <h2 className="text-3xl font-bold text-slate-800 mb-8 text-center">
+            Interactive Water Security Map
+          </h2>
+          <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+            <CardContent className="p-6">
+              <div className="mb-4">
+                <p className="text-lg text-slate-600 text-center mb-6">
+                  Explore Tucson's water infrastructure, monitoring stations, and risk areas with real GIS data from USGS, ADWR, and local sources.
+                </p>
+              </div>
+              <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg">
+                <iframe 
+                  src="https://www.perplexity.ai/search/create-an-interactive-map-that-_ryLcCi3Sey0Gb.xQQE8Rw?0=c"
+                  className="w-full h-full border-0"
+                  title="Tucson Water Security Interactive Map"
+                  loading="lazy"
+                />
+              </div>
+              <div className="mt-4 text-center">
+                <Button 
+                  className="bg-blue-600 hover:bg-blue-700 text-white"
+                  onClick={() => window.open('https://www.perplexity.ai/search/create-an-interactive-map-that-_ryLcCi3Sey0Gb.xQQE8Rw?0=c', '_blank')}
+                >
+                  Open Full Map <ExternalLink className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Call to Action Section */}
