@@ -140,13 +140,27 @@ const Index = () => {
                   Explore Tucson's water infrastructure, monitoring stations, and risk areas with real GIS data from USGS, ADWR, and local sources.
                 </p>
               </div>
-              <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg">
-                <iframe 
-                  src="https://www.perplexity.ai/search/create-an-interactive-map-that-_ryLcCi3Sey0Gb.xQQE8Rw?0=c"
-                  className="w-full h-full border-0"
-                  title="Tucson Water Security Interactive Map"
-                  loading="lazy"
-                />
+              <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-blue-50 to-green-50 border-2 border-dashed border-blue-200">
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
+                  <div className="bg-white/90 rounded-lg p-6 max-w-md mx-auto shadow-lg">
+                    <div className="text-6xl mb-4">🗺️</div>
+                    <h3 className="text-xl font-bold text-slate-800 mb-3">
+                      Interactive GIS Map
+                    </h3>
+                    <p className="text-sm text-slate-600 mb-4">
+                      This area will display real-time water infrastructure data from:
+                    </p>
+                    <ul className="text-xs text-slate-500 text-left space-y-1 mb-4">
+                      <li>• USGS monitoring stations</li>
+                      <li>• Arizona Dept. of Water Resources</li>
+                      <li>• Pima County GIS data</li>
+                      <li>• CAP infrastructure mapping</li>
+                    </ul>
+                    <p className="text-xs text-slate-400 italic">
+                      Preview unavailable - click button below for full map
+                    </p>
+                  </div>
+                </div>
               </div>
               <div className="mt-4 text-center">
                 <Button 
