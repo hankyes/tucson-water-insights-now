@@ -4,8 +4,16 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig({
+  server: {
+    port: 8080,
+  },
   base: '/tucson-water-insights-now/',
-  plugins: [react()],
-})
+  plugins: [react(), componentTagger()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+});
 
 
