@@ -140,11 +140,15 @@ const Index = () => {
                   Explore Tucson's water infrastructure, monitoring stations, and risk areas with real GIS data from USGS, ADWR, and local sources.
                 </p>
               </div>
-              <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg">
+              <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg bg-gray-100">
                 <img 
                   src="/lovable-uploads/61901eeb-8357-4688-aaa7-0acc7993db20.png"
                   alt="Tucson Water Security GIS Map showing monitoring stations and infrastructure"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain bg-white"
+                  onError={(e) => {
+                    console.error('Image failed to load:', e);
+                    e.currentTarget.style.display = 'none';
+                  }}
                 />
                 <div className="absolute top-4 left-4 bg-white/90 rounded-lg px-3 py-2 shadow-md">
                   <p className="text-sm font-medium text-slate-800">Live GIS Data</p>
